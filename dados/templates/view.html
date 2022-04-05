@@ -3,14 +3,40 @@
 <div class="col-8 m-auto pt-2 pb-2 text-center">
     <h1>Visualização</h1>
 </div>
-<div class="col-8 m-auto pt-2 pb-2 text-center">
+<!-- <div class="col-8 m-auto pt-2 pb-2 text-center">
     <strong>Nome: </strong>{{db.nome}}<br>
     <strong>Sobrenome: </strong>{{db.sobrenome}}<br>
     <strong>CPF: </strong>{{db.cpf}}<br>
-    <strong>Telefone: </strong>{{db.telefone}}<br>
+    <strong>Celular: </strong>{{db.telefone}}<br>
     <strong>Endereço: </strong>{{db.endereco}}<br>
 </div>
 <div class="col-8 m-auto pt-2 pb-2 text-center">
-    <a href="/" class="btn btn-info">Voltar</a>
+    <a href="/" class="btn btn-secondary">Voltar</a>
+</div> -->
+
+<div class="test container">
+    <div class="row justify-content-md-center">
+        <div class="col-3">
+    <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">Cadastro</div>
+        <div class="card-body">
+        <h5 class="card-title">Nome</h5>
+        <p class="card-text">{{db.nome}}</p>
+        <h5 class="card-title">Sobrenome</h5>
+        <p class="card-text">{{db.sobrenome}}</p>
+        <h5 class="card-title">CPF</h5>
+        <p class="card-text">{{db.cpf}}</p>
+        <h5 class="card-title">Telefone</h5>
+        <p class="card-text">{{db.telefone}}</p>
+        <h5 class="card-title">Endereço</h5>
+        <p class="card-text">{{db.endereco}}</p>
+        </div>
+    </div>
+        </div>
+    </div>
 </div>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <a href="/" class="btn btn-secondary">Voltar</a>
+    </div>
+
 {% endblock %}

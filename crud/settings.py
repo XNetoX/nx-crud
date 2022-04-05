@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5ey(x=+0fepcu=_r47&p$kr@-fn9(h%^9*5k!t4l(3#=tgsyc6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['nx-crud.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 #ALLOWED_HOSTS = ['nx-crud.herokuapp.com']
 
 # Application definition
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'crud.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db2.sqlite3',
+        'NAME': BASE_DIR / 'database.sqlite3',
     }
 }
 

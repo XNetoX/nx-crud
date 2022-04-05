@@ -4,10 +4,10 @@
   <h1>Cadastro</h1>
 </div>
 
-<div class="col-8 m-auto pt-2 pb-2 text-center">
+<!-- <div class="col-8 m-auto pt-2 pb-2 text-center">
   <a href="/" class="btn btn-info">Voltar</a>
-</div>
-<div class="col-8 m-auto pt-4 pb-2 text-center">
+</div> -->
+<!-- <div class="col-8 m-auto pt-4 pb-2 text-center">
   <div id="result"></div>
   {% if form.errors %}
   <p>Formulário com erro</p>
@@ -18,5 +18,40 @@
     <input type="submit" class="btn btn-success" value="Salvar">
   </form>
 
+</div> -->
+<div class="col-4 m-auto pt-4 pb-2 text-center">
+  <form class="row g-3" action="{% if db %}/update/{{db.id}}/{% else %}/create/{% endif %}" method="post">
+    {% csrf_token %}
+    <div class="col-md-6">
+      <label for="id_nome" class="form-label">Nome</label>
+      <input type="text" name="nome" class="form-control" id="id_nome">
+    </div>
+    <div class="col-md-6">
+      <label for="id_sobrenome" class="form-label">Sobrenome</label>
+      <input type="text" name="sobrenome" class="form-control" id="id_sobrenome">
+    </div>
+    <div class="col-12">
+      <label for="id_cpf" class="form-label">CPF</label>
+      <input type="text" name="cpf" class="form-control mask-cpf" id="id_cpf">
+    </div>
+    <div class="col-12">
+      <label for="id_telefone" class="form-label">Celular</label>
+      <input type="text" name="telefone" class="form-control mask-telefone" id="id_telefone">
+    </div>
+    <div class="col-md-12">
+      <label for="id_endereco" class="form-label">Endereço</label>
+      <input type="text" name="endereco" class="form-control" id="id_endereco">
+    </div>
+    <div class="col-6">
+      <div class="d-grid gap-2">
+      <button type="submit" class="btn btn-success">Salvar</button>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="d-grid gap-2">
+      <a href="/" class="btn btn-secondary">Voltar</a>
+      </div>
+    </div>
+  </form>
 </div>
 {% endblock %}
